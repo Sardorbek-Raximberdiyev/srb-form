@@ -1,9 +1,14 @@
+:root{
+  --accsent-color: #F03535;
+  --accent-color-two: #fff;
+}
+
 *{
   box-sizing: border-box;
 }
 
 *:focus{
-  outline: 3px dashed #5aa9f2;
+  outline: 2px dashed var(--accsent-color);
   outline-offset: 2px;
 }
 
@@ -15,9 +20,10 @@ body{
   height: 100%;
   margin: 0;
   padding: 0;
-  color: #fff;
+  color: var(--accent-color-two);
   font-size: 16px;
   font-family: "Inter", "Arial", sans-serif;
+  background-color: #E7E7E7;
 }
 
 .container{
@@ -59,7 +65,7 @@ body{
   margin-bottom: 60px;
   padding: 5px 15px;
   border-radius: 40px;
-  border: 1px solid #fff;
+  border: 1px solid var(--accent-color-two);
   font-size: 14px;
   line-height: 17px;
   font-weight: 500;
@@ -101,8 +107,20 @@ body{
 }
 
 .site-footer-data{
+  color: var(--accent-color-two);
+  text-decoration: none;
   font-weight: 700;
   margin: 0;
+  transition: color 0.3s ease;
+}
+
+.site-footer-data:hover{
+  text-decoration: underline;
+  color: var(--accsent-color);
+}
+
+.site-footer-data:active{
+opacity: 0.6;
 }
 
 .site-footer-text {
@@ -110,14 +128,14 @@ body{
   margin-left: 5px;
 }
 
-
 /* site-contact  */
+
 .site-contact {
   width: 570px;
   border-radius: 20px;
   padding: 55px 60px 40px;
   color: #000;
-  background-color: #fff;
+  background-color: var(--accent-color-two);
 }
 
 .site-contact-title {
@@ -138,6 +156,7 @@ body{
   box-sizing: border-box;
   border: 0;
   border-bottom: 1px solid #000;
+  outline: none;
 }
 
 .site-contact-input-last{
@@ -152,7 +171,7 @@ body{
   padding-bottom: 20px;
   border: 0;
   border-radius: 10px;
-  color: #fff;
+  color: var(--accent-color-two);
   background-color: #655AF2;
   font-size: 16px;
   line-height: 19px;
@@ -187,7 +206,7 @@ body{
   font-style: 11px;
   line-height: 15px;
   font-weight: 600;
-  color: #F03535;
+  color: var(--accsent-color);
 }
 
 .site-contact-bottom-link:hover{
